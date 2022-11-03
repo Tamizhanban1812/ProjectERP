@@ -3,7 +3,6 @@
   <groupId>sylixPro</groupId>
   <artifactId>projectErp</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
   <dependencies>
   		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 		<dependency>
