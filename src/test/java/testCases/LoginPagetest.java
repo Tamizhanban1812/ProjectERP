@@ -8,10 +8,12 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.testng.asserts.Assertion;
 
 import baseClass.Browser;
 import baseClass.Datadriven;
@@ -23,22 +25,30 @@ public class LoginPagetest extends baseclass{
 	
 
 	
-	Loginpage Login_page = new Loginpage();
+	//Loginpage Login_page = new Loginpage();
+	Loginpage Login_page = PageFactory.initElements(driver, Loginpage.class);
 	
 	@BeforeMethod
 	public void setup() throws FileNotFoundException, IOException {
 		launchBrowser(Browser.Chrome);
 		geturl(prop("url"));
-		
+		testcreate("Login Page Validity", "Tam", "Smoke");
 	}
 	
 	@Test(dataProvider = "logindata", dataProviderClass = Datadriven.class)
 	public void ValidLogin(String Email, String Password) {
-		type(Login_page.getusername(), Email);
-		type(Login_page.getPassword(), Password);
-		click(Login_page.submit());
+		type(Login_page.UserName, Email);
+		type(Login_page.Password, Password);
+		click(Login_page.Submitbutton);
 		String currentpageurl = geturl();
-		assertEquals("http://www.brm.tremplintech.in/web_pages/ord_reg.aspx", currentpageurl);
+		String Actualurl = "http://www.brm.tremplintech.in/web_pages/ord_reg.aspx";
+		if(Actualurl == currentpageurl) {
+			teststatus("pass");
+		}
+		else {
+			teststatus("fail");
+		}
+		
 	}
 	
 	@AfterMethod
@@ -46,3 +56,5 @@ public class LoginPagetest extends baseclass{
 		quit();
 	}
 }
+
+

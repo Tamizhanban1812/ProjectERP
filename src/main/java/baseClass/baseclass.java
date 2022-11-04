@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.poi.ss.formula.atp.Switch;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,6 +25,8 @@ import pages.Loginpage;
 public class baseclass {
 	
 	public static WebDriver driver;
+	public static ExtentReports  extent;
+	public static ExtentTest Test;
 	 
 	public void launchBrowser(Browser Browsername) {
 		switch (Browsername) {
@@ -94,16 +97,33 @@ public class baseclass {
 		return Value;
 	}
 	
-	public void automationreport() {
+	public void startreport() {
 		ExtentSparkReporter reporter = new ExtentSparkReporter("./Testreport.html");
-		ExtentReports extent = new ExtentReports();
+		extent = new ExtentReports();
 		extent.attachReporter(reporter);
-		ExtentTest Test = extent.createTest("Check Login Validity");
-		Test.pass("The login page is valid");
-		Test.pass("The title is correct");
-		Test.pass("The program is correct");
+	}
+	
+	public void closereport() {
 		extent.flush();
-		
+	}
+	
+	public void testcreate(String Desc, String Author, String Category) {
+		Test = extent.createTest(Desc);
+		Test.assignAuthor(Author);
+		Test.assignCategory(Category);
+	}
+	
+	public void teststatus(String Status) {
+		switch (Status) {
+		case "pass":
+			Test.pass("The test is passed");
+			break;
+		case "fail":
+			Test.fail("The test is failed");
+			break;
+		default:
+			break;
+		}
 	}
 	
 }
