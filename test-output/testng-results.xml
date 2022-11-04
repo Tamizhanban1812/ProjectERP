@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-11-03T23:14:20 IST" name="ERPProject" finished-at="2022-11-03T23:14:24 IST" duration-ms="4653">
+    <groups>
+    </groups>
+    <test started-at="2022-11-03T23:14:20 IST" name="Test" finished-at="2022-11-03T23:14:24 IST" duration-ms="4653">
+      <class name="seleniumBase.SelBase">
+        <test-method is-config="true" signature="setup()[pri:0, instance:seleniumBase.SelBase@67f639d3]" started-at="2022-11-03T23:13:59 IST" name="setup" finished-at="2022-11-03T23:14:20 IST" duration-ms="20323" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:seleniumBase.SelBase@67f639d3]" started-at="2022-11-03T23:14:24 IST" name="teardown" finished-at="2022-11-03T23:14:25 IST" duration-ms="246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- seleniumBase.SelBase -->
+      <class name="testCases.LoginPagetest">
+        <test-method signature="ValidLogin()[pri:0, instance:testCases.LoginPagetest@4b0d79fc]" started-at="2022-11-03T23:14:20 IST" name="ValidLogin" finished-at="2022-11-03T23:14:24 IST" duration-ms="4592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidLogin -->
+      </class> <!-- testCases.LoginPagetest -->
+    </test> <!-- Test -->
+  </suite> <!-- ERPProject -->
+</testng-results>

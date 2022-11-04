@@ -3,7 +3,8 @@
 <suite thread-count="2" name="ERPProject">
   <test thread-count="2" name="Test">
     <classes>
-      <class name="baseClass.basicFunctions"/>
+      <class name="seleniumBase.SelBase"/>
+      <class name="testCases.LoginPagetest"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- ERPProject -->
