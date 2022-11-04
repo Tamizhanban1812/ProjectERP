@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-ERPProject" class="navigator-link">
-              <span class="suite-name border-passed">ERPProject</span>
+              <span class="suite-name border-failed">ERPProject</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-ERPProject" class="hide-methods failed suite-ERPProject"> (hide)</a> <!-- hide-methods failed suite-ERPProject -->
+                      <a href="#" panel-name="suite-ERPProject" class="show-methods failed suite-ERPProject"> (show)</a> <!-- show-methods failed suite-ERPProject -->
+                    </span>
+                    <div class="method-list-content failed suite-ERPProject">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ERPProject" title="testCases.LoginPagetest" class="method navigator-link" hash-for-method="ValidLogin(Sylix, Admin@123)">ValidLogin(Sylix, Admin@123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ERPProject" title="testCases.LoginPagetest" class="method navigator-link" hash-for-method="ValidLogin(Sylix, 123)">ValidLogin(Sylix, 123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-ERPProject -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +123,7 @@
                     <div class="method-list-content passed suite-ERPProject">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ERPProject" title="testCases.LoginPagetest" class="method navigator-link" hash-for-method="ValidLogin">ValidLogin</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-ERPProject" title="testCases.LoginPagetest" class="method navigator-link" hash-for-method="ValidLogin(Sylix, Admin)">ValidLogin(Sylix, Admin)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-ERPProject -->
@@ -119,6 +138,74 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-ERPProject" class="panel ERPProject">
+          <div class="suite-ERPProject-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testCases.LoginPagetest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidLogin(Sylix, Admin@123)">
+                  </a> <!-- ValidLogin(Sylix, Admin@123) -->
+                  <span class="method-name">ValidLogin</span>
+                  <span class="parameters">(Sylix, Admin@123)</span>
+                  <div class="stack-trace">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : enter valid username and password}
+  (Session info: chrome=107.0.5304.88): enter valid username and password
+Build info: version: &apos;4.5.3&apos;, revision: &apos;4b786a1e430&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fcf67eeabe58764a3537289d10ad2a01, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.88, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\tamiz\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60707}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60707/devtoo..., se:cdpVersion: 107.0.5304.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fcf67eeabe58764a3537289d10ad2a01
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:322)
+	at baseClass.baseclass.geturl(baseclass.java:83)
+	at testCases.LoginPagetest.ValidLogin(LoginPagetest.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidLogin(Sylix, 123)">
+                  </a> <!-- ValidLogin(Sylix, 123) -->
+                  <span class="method-name">ValidLogin</span>
+                  <span class="parameters">(Sylix, 123)</span>
+                  <div class="stack-trace">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : enter valid username and password}
+  (Session info: chrome=107.0.5304.88): enter valid username and password
+Build info: version: &apos;4.5.3&apos;, revision: &apos;4b786a1e430&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [559e7fe74d726c3bc29de71f9c37d0b0, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.88, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\tamiz\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60682}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60682/devtoo..., se:cdpVersion: 107.0.5304.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 559e7fe74d726c3bc29de71f9c37d0b0
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:322)
+	at baseClass.baseclass.geturl(baseclass.java:83)
+	at testCases.LoginPagetest.ValidLogin(LoginPagetest.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ERPProject-class-failed -->
           <div class="suite-ERPProject-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -127,9 +214,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="ValidLogin">
-                  </a> <!-- ValidLogin -->
+                  <a name="ValidLogin(Sylix, Admin)">
+                  </a> <!-- ValidLogin(Sylix, Admin) -->
                   <span class="method-name">ValidLogin</span>
+                  <span class="parameters">(Sylix, Admin)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -144,6 +232,7 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;2&quot; name=&quot;ERPProject&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;parameter name=&quot;url&quot; value=&quot;http://www.brm.tremplintech.in/web_pages/login.aspx&quot;/&gt;
   &lt;test thread-count=&quot;2&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;seleniumBase.SelBase&quot;/&gt;
@@ -187,16 +276,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'ValidLogin')
 data.setCell(0, 2, 'testCases.LoginPagetest')
-data.setCell(0, 3, 4592);
+data.setCell(0, 3, 6740);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'ValidLogin')
+data.setCell(1, 2, 'testCases.LoginPagetest')
+data.setCell(1, 3, 696);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'ValidLogin')
+data.setCell(2, 2, 'testCases.LoginPagetest')
+data.setCell(2, 3, 628);
 window.suiteTableData['ERPProject']= { tableData: data, tableDiv: 'times-div-ERPProject'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-ERPProject">
               </div> <!-- times-div-ERPProject -->
             </div> <!-- times-div -->
@@ -224,22 +321,58 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">seleniumBase.SelBase</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">setup</span>
+                <span class="method-name">syso</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.LoginPagetest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">590 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">ValidLogin</span>
-                <span class="method-start">20375 ms</span>
+                <span class="method-name">ValidLogin(Sylix, Admin)</span>
+                <span class="method-start">5945 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">12693 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">12990 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ValidLogin(Sylix, 123)</span>
+                <span class="method-start">19852 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">20482 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">20662 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ValidLogin(Sylix, Admin@123)</span>
+                <span class="method-start">28438 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">29136 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">seleniumBase.SelBase</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">25005 ms</span>
+                <span class="method-name">aso</span>
+                <span class="method-start">29372 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

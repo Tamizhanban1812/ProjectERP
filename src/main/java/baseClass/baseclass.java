@@ -1,6 +1,10 @@
 package baseClass;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,12 +14,17 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.Loginpage;
 
 public class baseclass {
 	
 	public static WebDriver driver;
+	 
 	public void launchBrowser(Browser Browsername) {
 		switch (Browsername) {
 		case Chrome:
@@ -72,6 +81,29 @@ public class baseclass {
 	
 	public void click(WebElement element) {
 		element.click();
+	}
+	
+	public String geturl() {
+		return driver.getCurrentUrl();
+	}
+	
+	public String prop(String Key) throws FileNotFoundException, IOException {
+		Properties property = new Properties();
+		property.load(new FileInputStream("./property.properties"));
+		String Value = property.getProperty(Key);
+		return Value;
+	}
+	
+	public void automationreport() {
+		ExtentSparkReporter reporter = new ExtentSparkReporter("./Testreport.html");
+		ExtentReports extent = new ExtentReports();
+		extent.attachReporter(reporter);
+		ExtentTest Test = extent.createTest("Check Login Validity");
+		Test.pass("The login page is valid");
+		Test.pass("The title is correct");
+		Test.pass("The program is correct");
+		extent.flush();
+		
 	}
 	
 }

@@ -1,25 +1,21 @@
 package seleniumBase;
 
-import org.openqa.selenium.WebDriver;
+
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-
-import baseClass.Browser;
 import baseClass.baseclass;
 
 public class SelBase extends baseclass {
 
-	
-	
 	@BeforeSuite
-	public void setup() {
-		launchBrowser(Browser.Chrome);
-		geturl("http://www.brm.tremplintech.in/web_pages/login.aspx");
+	private void syso() {
+		System.out.println("Before Suite");
+
 	}
-	
+
 	@AfterSuite
-	public void teardown() {
-		quit();
+	public void aso(){
+		System.out.println("After Suite");
 	}
  
 	
