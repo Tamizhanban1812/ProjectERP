@@ -1,6 +1,7 @@
 package testCases;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import baseClass.baseclass;
@@ -14,9 +15,9 @@ public class LoginPagetest extends baseclass{
 	
 	@Test
 	public void ValidLogin() {
-		Login_page.getusername();
-		Login_page.getPassword();
-		Login_page.submit();
+		type(Login_page.getusername(), "sylix");
+		type(Login_page.getPassword(), "admin");
+		click(Login_page.submit());
 	}
 
 }

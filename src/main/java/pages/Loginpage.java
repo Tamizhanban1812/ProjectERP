@@ -11,18 +11,18 @@ import baseClass.baseclass;
 
 public class Loginpage extends baseclass{
 	
-	public void getusername() {
+	public WebElement getusername() {
 		WebElement UserName = findelements(elementType.Xpath, "//input[@name = 'txt_unam']");
-		type(UserName, "sylix");
+		return UserName;
 	}
 	
-	public void getPassword() {
+	public WebElement getPassword() {
 		WebElement Password = findelements(elementType.Xpath, "//input[@name = 'txt_pass']");
-		type(Password, "admin");
+		return Password;
 	}
-	public void submit() {
+	public WebElement submit() {
 		WebElement Submitbutton = findelements(elementType.Name, "Button3");
-		click(Submitbutton);
+		return Submitbutton;
 	}
 	}
 	
