@@ -109,12 +109,12 @@
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ERPProject" title="testCases.LoginPagetest" class="method navigator-link" hash-for-method="ValidLogin(Sylix, Admin)">ValidLogin(Sylix, Admin)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-ERPProject" title="testCases.LoginPagetest" class="method navigator-link" hash-for-method="ValidLogin(Sylix, 123)">ValidLogin(Sylix, 123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ERPProject" title="testCases.LoginPagetest" class="method navigator-link" hash-for-method="ValidLogin(Sylix, 123)">ValidLogin(Sylix, 123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-ERPProject" title="testCases.LoginPagetest" class="method navigator-link" hash-for-method="ValidLogin(Sylix, Admin)">ValidLogin(Sylix, Admin)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-ERPProject -->
@@ -145,25 +145,8 @@
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
 	at jdk.proxy2/jdk.proxy2.$Proxy14.clear(Unknown Source)
-	at baseClass.baseclass.type(baseclass.java:81)
-	at testCases.LoginPagetest.ValidLogin(LoginPagetest.java:40)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="ValidLogin(Sylix, Admin)">
-                  </a> <!-- ValidLogin(Sylix, Admin) -->
-                  <span class="method-name">ValidLogin</span>
-                  <span class="parameters">(Sylix, Admin)</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy14.clear(Unknown Source)
-	at baseClass.baseclass.type(baseclass.java:81)
-	at testCases.LoginPagetest.ValidLogin(LoginPagetest.java:40)
+	at baseClass.baseclass.type(baseclass.java:85)
+	at testCases.LoginPagetest.ValidLogin(LoginPagetest.java:37)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 27 stack frames
 </div> <!-- stack-trace -->
@@ -179,8 +162,25 @@
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
 	at jdk.proxy2/jdk.proxy2.$Proxy14.clear(Unknown Source)
-	at baseClass.baseclass.type(baseclass.java:81)
-	at testCases.LoginPagetest.ValidLogin(LoginPagetest.java:40)
+	at baseClass.baseclass.type(baseclass.java:85)
+	at testCases.LoginPagetest.ValidLogin(LoginPagetest.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidLogin(Sylix, Admin)">
+                  </a> <!-- ValidLogin(Sylix, Admin) -->
+                  <span class="method-name">ValidLogin</span>
+                  <span class="parameters">(Sylix, Admin)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.clear(Unknown Source)
+	at baseClass.baseclass.type(baseclass.java:85)
+	at testCases.LoginPagetest.ValidLogin(LoginPagetest.java:37)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 27 stack frames
 </div> <!-- stack-trace -->
@@ -246,7 +246,7 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'ValidLogin')
 data.setCell(0, 2, 'testCases.LoginPagetest')
-data.setCell(0, 3, 13);
+data.setCell(0, 3, 12);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'ValidLogin')
 data.setCell(1, 2, 'testCases.LoginPagetest')
@@ -259,7 +259,7 @@ window.suiteTableData['ERPProject']= { tableData: data, tableDiv: 'times-div-ERP
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 ms</span>
+              <span class="suite-total-time">Total running time: 15 ms</span>
               <div id="times-div-ERPProject">
               </div> <!-- times-div-ERPProject -->
             </div> <!-- times-div -->
@@ -295,52 +295,52 @@ return data;
               <div class="chronological-class-name">testCases.LoginPagetest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">959 ms</span>
+                <span class="method-start">776 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">ValidLogin(Sylix, Admin)</span>
-                <span class="method-start">12068 ms</span>
+                <span class="method-start">27496 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">12090 ms</span>
+                <span class="method-start">27516 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">12413 ms</span>
+                <span class="method-start">27800 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">ValidLogin(Sylix, 123)</span>
-                <span class="method-start">16952 ms</span>
+                <span class="method-start">33715 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">16959 ms</span>
+                <span class="method-start">33720 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">17207 ms</span>
+                <span class="method-start">33885 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">ValidLogin(Sylix, Admin@123)</span>
-                <span class="method-start">30660 ms</span>
+                <span class="method-start">38833 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">30663 ms</span>
+                <span class="method-start">38835 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">seleniumBase.SelBase</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">aso</span>
-                <span class="method-start">30905 ms</span>
+                <span class="method-start">39058 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
