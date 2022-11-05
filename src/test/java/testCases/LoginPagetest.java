@@ -23,9 +23,6 @@ import pages.Loginpage;
 
 public class LoginPagetest extends baseclass{
 	
-
-	
-	//Loginpage Login_page = new Loginpage();
 	Loginpage Login_page = PageFactory.initElements(driver, Loginpage.class);
 	
 	@BeforeMethod
@@ -36,7 +33,7 @@ public class LoginPagetest extends baseclass{
 	}
 	
 	@Test(dataProvider = "logindata", dataProviderClass = Datadriven.class)
-	public void ValidLogin(String Email, String Password) {
+	public void ValidLogin(String Email, String Password) throws IOException {
 		type(Login_page.UserName, Email);
 		type(Login_page.Password, Password);
 		click(Login_page.Submitbutton);
@@ -47,6 +44,7 @@ public class LoginPagetest extends baseclass{
 		}
 		else {
 			teststatus("fail");
+			takesscreenshotmethod("Loginpage");
 		}
 		
 	}
@@ -55,6 +53,7 @@ public class LoginPagetest extends baseclass{
 	public void teardown() {
 		quit();
 	}
+	
 }
 
 

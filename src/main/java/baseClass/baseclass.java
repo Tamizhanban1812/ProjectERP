@@ -1,5 +1,6 @@
 package baseClass;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -8,6 +9,8 @@ import java.util.Properties;
 
 import org.apache.poi.ss.formula.atp.Switch;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,6 +21,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.google.common.io.Files;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.Loginpage;
@@ -124,6 +128,13 @@ public class baseclass {
 		default:
 			break;
 		}
+	}
+	
+	public void takesscreenshotmethod(String filename) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File src = ts.getScreenshotAs(OutputType.FILE);
+		File trgt = new File ("./" + filename + ".png");
+		Files.copy(src, trgt);
 	}
 	
 }
