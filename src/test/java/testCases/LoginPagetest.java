@@ -34,11 +34,11 @@ public class LoginPagetest extends baseclass{
 	
 	@Test(dataProvider = "logindata", dataProviderClass = Datadriven.class)
 	public void ValidLogin(String Email, String Password) throws IOException {
-		type(Login_page.UserName, Email);
-		type(Login_page.Password, Password);
-		click(Login_page.Submitbutton);
-		String currentpageurl = geturl();
-		String Actualurl = "http://www.brm.tremplintech.in/web_pages/ord_reg.aspx";
+		//type(Login_page.UserName, Email);
+		//type(Login_page.Password, Password);
+		//click(Login_page.Submitbutton);
+		//String currentpageurl = geturl();
+		//String Actualurl = "http://www.brm.tremplintech.in/web_pages/ord_reg.aspx";
 		if(Actualurl == currentpageurl) {
 			teststatus("pass");
 		}
